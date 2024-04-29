@@ -34,14 +34,10 @@ public class LightBoard
           count++;
         }
     }
-    if(lights[row][col]){
-      if(count%2 == 0){
-        return false;
-      }
-    } else if(lights[row][col] == false){
-      if(count%3 == 0){
-        return true;
-      }
+    if(lights[row][col] && count%2 == 0){
+      return false;
+    } else if(lights[row][col] == false && count%3 == 0){
+      return true;
     } else{
       return lights[row][col];
   }
